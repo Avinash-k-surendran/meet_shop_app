@@ -1,4 +1,4 @@
-enum CategoryType {fish, chicken, spicy, vegetables }
+enum CategoryType {meat, fish, marinateditems, Readytocook }
 
 class ProductModel {
   final String name;

@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:meet_shop/Meet%20shop/provider/cart.dart';
+import 'package:meet_shop/Meet%20shop/widget/main_tile.dart';
+import 'package:meet_shop/Meet%20shop/widget/product_item.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/cart_provider.dart';
-import '../widget/main_tile.dart';
-import '../widget/product_item.dart';
-import 'cart_screens.dart';
+import 'cart.dart';
 
-class AdidasItemScreen extends StatelessWidget {
-  const AdidasItemScreen({super.key});
+
+class MeatItemScreen extends StatelessWidget {
+  const MeatItemScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final adidasItems = context.watch<CartProvider>().adidasItems;
+    final meatItems = context.watch<CartProvider>().meath;
     final cart = context.watch<CartProvider>().cart;
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            MainTitle(title: "Fishes"),
+            MainTitle(title: "Meat"),
             Expanded(
               child: GridView.builder(
-                  itemCount: Fishes.length,
+                  itemCount: meatItems.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, childAspectRatio: 1 / 1.4),
                   itemBuilder: (context, index) => ProductItemCard(
-                    title: Fishes[index].name,
-                    price: Fishes[index].price.toString(),
-                    imageUrl: Fishes[index].image,
+                    title: meatItems[index].name,
+                    price: meatItems[index].price.toString(),
+                    imageUrl: meatItems[index].image,
                     onPressed: () {
                       Provider.of<CartProvider>(context, listen: false)
-                          .addToCart(adidasItems[index]);
+                          .addToCart(meatItems[index]);
                     },
                   )),
             ),
@@ -43,10 +44,10 @@ class AdidasItemScreen extends StatelessWidget {
             return CartScreen();
           },
         )),
-        child: Wrap(children: [
+        child:const Wrap(children: [
           Icon(
-            Icons.shopping_bag,
-            color: Colors.red,
+            Icons.shopping_cart,
+            color: Colors.white,
           ),
 
         ]),

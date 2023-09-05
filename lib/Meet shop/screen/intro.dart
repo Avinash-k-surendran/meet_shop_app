@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'category.dart';
 
+
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
 
@@ -14,8 +15,8 @@ class IntroScreen extends StatelessWidget {
         child: Column(
 
           children: [
-            Image.asset(
-              "assets/images/icon of shop.webp",
+            Image.network(
+              "https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1lYXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
               fit: BoxFit.contain,
               width: 300,
               height: 300,
@@ -24,7 +25,7 @@ class IntroScreen extends StatelessWidget {
               height: 30,
             ),
             const Text(
-              "Welcome to \nour online \nMEET shop.",
+              "We Deliver fresh\nmeats at your \ndoorstep ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 46,
@@ -47,7 +48,7 @@ class IntroScreen extends StatelessWidget {
                   );
                 },
                 child: const Text(
-                  "Shop Now",
+                  "Get Started",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -56,7 +57,7 @@ class IntroScreen extends StatelessWidget {
                 ),
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStatePropertyAll(Colors.lightBlueAccent),
+                    MaterialStatePropertyAll(Colors.greenAccent),
                     shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)))),

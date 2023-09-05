@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:meet_shop/Meet%20shop/provider/cart.dart';
+import 'package:meet_shop/Meet%20shop/widget/main_tile.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/cart_provider.dart';
-import '../widget/main_tile.dart';
+
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -52,14 +53,14 @@ class CartScreen extends StatelessWidget {
             margin: EdgeInsets.all(40),
             padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
-              color: Colors.lightBlue,
+              color: Colors.greenAccent,
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MainTitle(title: "Total\n$totalAmt"),
-                ElevatedButton(onPressed: () {}, child: Text("Pls pay now"))
+                ElevatedButton(onPressed: () {}, child: Text("Pay Now"))
               ],
             ),
           )

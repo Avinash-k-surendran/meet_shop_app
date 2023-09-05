@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meet_shop/Meet%20shop/model/product.dart';
+import 'package:meet_shop/Meet%20shop/screen/meet.dart';
 
-import '../Models/product_models.dart';
-import '../screens/addidas_item.dart';
 
 class CategoryItemCard extends StatelessWidget {
   final String title;
@@ -44,9 +44,9 @@ class CategoryItemCard extends StatelessWidget {
             padding: const EdgeInsets.all(12.0),
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AdidasItemScreen()),);
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MeatItemScreen()),);
                 }, child: const Text("View More")),
-          )
+          ),
         ],
       ),
     );
